@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Initial background color */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff; /* Initial font color */
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ff6600; /* Hover font color */
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('header');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = '#ff6600'; // Background color when scrolled
+            } else {
+                navbar.style.backgroundColor = '#333'; // Initial background color
+            }
+        });
+    </script>
+    <title>Interactive Navigation Menu</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Your page content goes here -->
+        <h1>Welcome to our website</h1>
+    </main>
+</body>
+</html>
